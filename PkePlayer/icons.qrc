@@ -1,3 +1,6 @@
 <RCC>
-    <qresource prefix="/new/icons"/>
+    <qresource prefix="/new/icons">
+        <file>play.png</file>
+        <file>pause.png</file>
+    </qresource>
 </RCC>
