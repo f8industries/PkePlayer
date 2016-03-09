@@ -46,10 +46,11 @@ public:
     QTimeEdit *timeEdit;
     QLabel *label_6;
     QTimeEdit *timeEdit_2;
-    QLabel *label_7;
+    QLabel *statusLabel;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *pushButton_2;
-    QSlider *horizontalSlider;
+    QSlider *volumeSlider;
+    QHBoxLayout *horizontalLayout_3;
 
     void setupUi(QDialog *App)
     {
@@ -139,10 +140,10 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout_4);
 
-        label_7 = new QLabel(App);
-        label_7->setObjectName(QStringLiteral("label_7"));
+        statusLabel = new QLabel(App);
+        statusLabel->setObjectName(QStringLiteral("statusLabel"));
 
-        verticalLayout_2->addWidget(label_7);
+        verticalLayout_2->addWidget(statusLabel);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
@@ -164,19 +165,25 @@ public:
 
         horizontalLayout_5->addWidget(pushButton_2);
 
-        horizontalSlider = new QSlider(App);
-        horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
-        horizontalSlider->setMaximum(100);
-        horizontalSlider->setValue(80);
-        horizontalSlider->setOrientation(Qt::Horizontal);
+        volumeSlider = new QSlider(App);
+        volumeSlider->setObjectName(QStringLiteral("volumeSlider"));
+        volumeSlider->setMaximum(100);
+        volumeSlider->setValue(80);
+        volumeSlider->setOrientation(Qt::Horizontal);
 
-        horizontalLayout_5->addWidget(horizontalSlider);
+        horizontalLayout_5->addWidget(volumeSlider);
 
 
         verticalLayout_2->addLayout(horizontalLayout_5);
 
 
         gridLayout->addLayout(verticalLayout_2, 0, 1, 1, 1);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+
+        gridLayout->addLayout(horizontalLayout_3, 1, 0, 1, 1);
 
 
         retranslateUi(App);
@@ -193,7 +200,7 @@ public:
         label_4->setText(QApplication::translate("App", "minut", 0));
         label_5->setText(QApplication::translate("App", "od ", 0));
         label_6->setText(QApplication::translate("App", "do", 0));
-        label_7->setText(QString());
+        statusLabel->setText(QString());
         pushButton_2->setText(QString());
     } // retranslateUi
 

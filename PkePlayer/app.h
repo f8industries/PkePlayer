@@ -2,6 +2,9 @@
 #define APP_H
 
 #include <QDialog>
+#include <QStringList>
+#include <QDir>
+#include <QDebug>
 
 namespace Ui {
 class App;
@@ -17,6 +20,11 @@ public:
 
 private:
     Ui::App *ui;
+
+    void refreshFiles();
+    QStringList myList;
+    QDir myPath;
+
 };
 
 #endif // APP_H

@@ -111,7 +111,7 @@
       </layout>
      </item>
      <item>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="statusLabel">
        <property name="text">
         <string/>
        </property>
@@ -156,7 +156,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSlider" name="horizontalSlider">
+        <widget class="QSlider" name="volumeSlider">
          <property name="maximum">
           <number>100</number>
          </property>
@@ -171,6 +171,9 @@
       </layout>
      </item>
     </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_3"/>
    </item>
   </layout>
  </widget>
